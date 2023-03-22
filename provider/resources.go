@@ -159,6 +159,9 @@ func Provider() tfbridge.ProviderInfo {
 			"headers": {
 				Secret: &overrideSecretFlagForHeaders,
 			},
+			"token": {
+				MarkAsOptional: tfbridge.True(),
+			},
 		},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
